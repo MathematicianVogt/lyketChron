@@ -1,6 +1,6 @@
 import newspaper
 from newspaper import Article
-class Article:
+class NewsArticle:
 	def __init__(self,url):
 		self.article = Article(url)
 		self.article.download()
@@ -28,4 +28,4 @@ class Article:
 		return self.article.top_image.encode('ascii', 'ignore')
 	
 	def date_made(self):
-		return self.article.publish_date.encode('ascii', 'ignore')
+		return self.article.publish_date
