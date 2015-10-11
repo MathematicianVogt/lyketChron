@@ -41,6 +41,8 @@ class MongoLib:
 	 #rerturns all instances of the collection that meet the rules specified as a dictionary
 	 def CollectionFind(self,rules):
 	 	return self.GetCol().find(rules)
+	 def getLastN(self, N):
+	 	return self.collection.find().skip(db.collection.count() - N)
 
 
 

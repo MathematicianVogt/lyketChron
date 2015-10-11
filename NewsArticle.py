@@ -40,3 +40,5 @@ class NewsArticle:
 		return x
 	def get_title(self):
 		return self.article.title.encode('ascii','ignore')
+	def get_url(self):
+		return self.article.url.encode('ascii', 'ignore')

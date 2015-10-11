@@ -51,6 +51,7 @@ class LyketJob:
 			#image for article : String (url to image)
 			article_thumbnaillink = current_article.thumbnail_url()
 
+			article_url = current_article.get_url()
 
 
 			new_entry = {}
@@ -64,6 +65,7 @@ class LyketJob:
 			new_entry['likes']=0
 			new_entry['dislikes']=0
 			new_entry['comments'] = []
+			new_entry['url'] = article_url
 			self.db.CollectionSubmitOne(new_entry)
 		
 
