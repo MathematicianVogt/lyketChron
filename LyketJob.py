@@ -4,7 +4,7 @@ import thread
 import json
 from MongoLib import *
 from multiprocessing.dummy import Pool as ThreadPool 
-
+import datetime
 from NewsArticle import NewsArticle
 class LyketJob:
 	def __init__(self):
@@ -66,6 +66,7 @@ class LyketJob:
 			new_entry['dislikes']=0
 			new_entry['comments'] = []
 			new_entry['url'] = article_url
+			new_entry['creationtime']=datetime.datetime.now()
 			self.db.CollectionSubmitOne(new_entry)
 		
 
