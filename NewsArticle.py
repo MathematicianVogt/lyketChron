@@ -29,3 +29,8 @@ class NewsArticle:
 	
 	def date_made(self):
 		return self.article.publish_date
+	def get_videos(self):
+		x=self.article.movies
+		for i in range(0,len(x)):
+			x[i] = x[i].encode('ascii', 'ignore')
+		return x
