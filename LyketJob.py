@@ -9,7 +9,7 @@ from NewsArticle import NewsArticle
 class LyketJob:
 	def __init__(self):
 		self.file=open('LikeItRSSFeeds.txt')
-		self.db=MongoLib("Lyket", "Articles")
+		self.db=MongoLib("lyket", "articles")
 
 	#thread function, will put enteries into DB in paraell. Will build json, then put into DB
 	def put_article_in_db(self,story_url):
@@ -31,7 +31,7 @@ class LyketJob:
 
 
 
-		if(list(self.db.CollectionFind({'art_title': article_title, 'art_pub': article_published}))):
+		if(list(self.db.CollectionFind({'title': article_title, 'pub': article_published}))):
 			print "entry already found in DB title: " + article_title 
 		else:
 			current_article.goodArticle()
@@ -54,13 +54,13 @@ class LyketJob:
 
 
 			new_entry = {}
-			new_entry['art_title']=article_title
-			new_entry['art_sum']=article_summary
-			new_entry['art_auth']=article_authors
-			new_entry['art_thumb'] = article_thumbnaillink
-			new_entry['art_pub'] = article_published
-			new_entry['art_key_words'] = article_key_words
-			new_entry['art_vids']  = article_videos
+			new_entry['title']=article_title
+			new_entry['sum']=article_summary
+			new_entry['auth']=article_authors
+			new_entry['thumb'] = article_thumbnaillink
+			new_entry['pub'] = article_published
+			new_entry['keywords'] = article_key_words
+			new_entry['vids']  = article_videos
 			new_entry['likes']=0
 			new_entry['dislikes']=0
 			new_entry['comments'] = []
