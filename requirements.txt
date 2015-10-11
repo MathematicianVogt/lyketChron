@@ -1,1 +1,4 @@
 plan
+pymongo
+newspaper
+feedparser
