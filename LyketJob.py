@@ -86,6 +86,7 @@ class LyketJob:
 					url_array.append(story_url)
 					
 				result = pool.map(self.put_article_in_db, url_array)
+				url_array=[]
 		except Exception as e:
 			print "The following issue occured: "
 			print e
