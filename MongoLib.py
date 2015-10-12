@@ -44,12 +44,12 @@ class MongoLib:
 	 def getLastN(self, N):
 	 	return self.collection.find().skip(db.collection.count() - N)
 
+	 def findOne(self,rules):
+	 	return self.collection.find_one(rules)
+	 def size(self):
+	 	return self.collection.count()
 
 
 
-
-
-
-x=MongoLib("ryans_db","ryan")
 
 
