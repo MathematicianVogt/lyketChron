@@ -77,7 +77,7 @@ class LyketJob:
 				new_entry['comments'] = []
 				new_entry['url'] = article_url
 				new_entry['creationtime']=datetime.datetime.now()
-				new_entry['companycreator'] = res.domain
+				new_entry['publisher'] = res.domain
 				self.db.CollectionSubmitOne(new_entry)
 
 		except:
