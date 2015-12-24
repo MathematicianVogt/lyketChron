@@ -76,7 +76,7 @@ class LyketJob:
 				new_entry['dislikes']=0
 				new_entry['comments'] = []
 				new_entry['url'] = article_url
-				new_entry['creationtime']=datetime.datetime.now()
+				new_entry['creationtime']=datetime.datetime.utcnow()
 				new_entry['companycreator'] = res.domain
 				self.db.CollectionSubmitOne(new_entry)
 
