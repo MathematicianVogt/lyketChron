@@ -80,10 +80,11 @@ class LyketJob:
 				new_entry['publisher'] = res.domain
 				self.db.CollectionSubmitOne(new_entry)
 
-		except:
-			pass
-
-
+		except Exception as e:
+			print "------"
+			print "its fucked emma"
+			print e
+			print "------"
 
 	def runJob(self):
 		try:
