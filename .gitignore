@@ -2,3 +2,5 @@
 .DS_Store
 
 *.pyc
+
+cron/schedule.py
