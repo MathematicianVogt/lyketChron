@@ -45,7 +45,7 @@ class MongoLib:
 	 	return self.collection.find().skip(db.collection.count() - N)
 
 	 def findOne(self,rules):
-	 	return self.collection.find_one(rules)
+	 	return self.collection.findOne(rules)
 	 def size(self):
 	 	return self.collection.count()
 
