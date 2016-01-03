@@ -48,6 +48,8 @@ class MongoLib:
 	 	return self.collection.findOne(rules)
 	 def size(self):
 	 	return self.collection.count()
+	 def in_set(self,dic):
+	 	return bool(self.collection.find_one(dic))
 
 
 

@@ -28,7 +28,7 @@ class LyketJob:
 	#thread function, will put enteries into DB in paraell. Will build json, then put into DB
 	def put_article_in_db(self,story_url):
 		try:
-			if( self.db.findOne({'url':story_url}) == None ):
+			if( not self.db.in_set({'url':story_url})):
 				current_article = NewsArticle(story_url)
 				
 
