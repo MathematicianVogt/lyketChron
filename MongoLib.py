@@ -22,7 +22,7 @@ class MongoLib:
 	 #submit one piece of data to collection of this instance
 	 def CollectionSubmitOne(self, post):
 	 	
-	 	self.collection.insert_one(post)
+	 	self.collection.insert(post)
 	 
 	 #submit multiple pieces of data to collection of this instance
 	 def CollectionSubmitMany(self,postList):
