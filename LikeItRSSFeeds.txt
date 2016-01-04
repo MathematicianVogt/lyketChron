@@ -131,4 +131,3 @@ http://rss.nytimes.com/services/xml/rss/nyt/Commercial.xml
 http://rss.nytimes.com/services/xml/rss/nyt/Automobiles.xml
 http://rss.nytimes.com/services/xml/rss/nyt/MostViewed.xml
 http://rss.nytimes.com/services/xml/rss/nyt/MostShared.xml
-http://rss.nytimes.com/services/xml/rss/nyt/Obituaries.xml
